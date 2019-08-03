@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <div id="app">
+    <p>User List</p>
+  
+    <ul>
+      <li v-for="user in users" :key="user.id">
+        {{ user.name }}
+      </li>
+    </ul>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+  <script>
+    const app = new Vue({
+      el: '#app',
+      data: {
+        message: 'Ahoy Vue!',
+        isMe: true,
+        users: [{
+          id: 1,
+          name: 'John Doe'
+        }, {
+          id: 2,
+          name: 'Jane Doe'
+        }, {
+          id: 3,
+          name: 'Chuck Norris'
+        }]
+      }
+    })
+  </script>
+</body>
+</html>
